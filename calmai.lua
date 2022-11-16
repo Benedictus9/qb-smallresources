@@ -43,6 +43,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
         setAgro = {5,5,0,5,5,5,5,5,5,5,5,3,3,3}
     else
         setAgro = {4,4,4,4,4,4,4,4,4,4,4,3,3,3}
+    end
 end)
 
 -- When the players job gets updated this will trigger and update the playerdata
@@ -52,6 +53,7 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
         setAgro = {1,1,1,1,5,5,5,5,5,5,5,0,0,0}
     else
         setAgro = {4,4,4,4,4,4,4,4,4,4,4,3,3,3}
+    end
 end)
 
 -- When the players gang gets updated this will trigger and update the playerdata
