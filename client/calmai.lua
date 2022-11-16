@@ -44,15 +44,13 @@ function setRelations(setAgro)
 end
 
 -- Sets the playerdata when spawned
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function(JobInfo, GangInfo)
-    Wait(500)
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    Wait(10000)
     PlayerData = QBCore.Functions.GetPlayerData()
-    PlayerData.job = JobInfo
-    PlayerData.gang = GangInfo
-    print(dump(JobInfo))
-    print(dump(GangInfo))
-    local PlayerJob = PlayerData.job.name
-    local PlayerGang = PlayerData.gang.name
+    local PlayerJob = PlayerData.job
+    local PlayerGang = PlayerData.gang
+    print(dump(PlayerJob))
+    print(dump(PlayerGang))
     if PlayerJob.name == "police" then
         setAgro = {1,1,1,1,5,5,5,5,5,5,5,0,0,0,4}
         setRelations(setAgro)
@@ -87,6 +85,7 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
     PlayerData.job = JobInfo
     print(dump(JobInfo))
     local PlayerJob = PlayerData.job.name
+    print(PlayerJob)
     if Playerjob == "police" then
         setAgro = {1,1,1,1,5,5,5,5,5,5,5,0,0,0,4}
         setRelations(setAgro)
@@ -105,6 +104,7 @@ RegisterNetEvent('QBCore:Client:OnGangUpdate', function(GangInfo)
     PlayerData.gang = GangInfo
     print(dump(GangInfo))
     local PlayerGang = PlayerData.gang.name
+    print(PlayerGang)
     if PlayerGang == "ballas" then
         setAgro = {5,0,5,5,5,5,5,5,5,5,5,3,3,3,4}
         setRelations(setAgro)
