@@ -52,7 +52,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     print(dump(PlayerJob))
     print(dump(PlayerGang))
     if PlayerJob.name == "police" then
-        setAgro = {1,1,1,1,5,5,5,5,5,5,5,0,0,0,4}
+        setAgro = {1,1,1,1,1,1,1,1,1,1,1,0,0,0,4}
         setRelations(setAgro)
         print('policeLoadAgroSet')
     elseif PlayerGang.name == "ballas" then
@@ -87,7 +87,7 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
     local PlayerJob = PlayerData.job.name
     print(PlayerJob)
     if Playerjob == "police" then
-        setAgro = {1,1,1,1,5,5,5,5,5,5,5,0,0,0,4}
+        setAgro = {1,1,1,1,1,1,1,1,1,1,1,0,0,0,4}
         setRelations(setAgro)
         print('policeJobUpdateAgroSet')
     else
